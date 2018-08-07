@@ -105,33 +105,57 @@ CMakeFiles/graph_test.dir/graph_weighted.cpp.o.provides: CMakeFiles/graph_test.d
 CMakeFiles/graph_test.dir/graph_weighted.cpp.o.provides.build: CMakeFiles/graph_test.dir/graph_weighted.cpp.o
 
 
-CMakeFiles/graph_test.dir/route.cpp.o: CMakeFiles/graph_test.dir/flags.make
-CMakeFiles/graph_test.dir/route.cpp.o: ../route.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ghost/src/workspace/xmu/path_planning/graph_lib/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/graph_test.dir/route.cpp.o"
-	/usr/lib/ccache/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/graph_test.dir/route.cpp.o -c /home/ghost/src/workspace/xmu/path_planning/graph_lib/route.cpp
+CMakeFiles/graph_test.dir/route_xy.cpp.o: CMakeFiles/graph_test.dir/flags.make
+CMakeFiles/graph_test.dir/route_xy.cpp.o: ../route_xy.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ghost/src/workspace/xmu/path_planning/graph_lib/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/graph_test.dir/route_xy.cpp.o"
+	/usr/lib/ccache/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/graph_test.dir/route_xy.cpp.o -c /home/ghost/src/workspace/xmu/path_planning/graph_lib/route_xy.cpp
 
-CMakeFiles/graph_test.dir/route.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/graph_test.dir/route.cpp.i"
-	/usr/lib/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ghost/src/workspace/xmu/path_planning/graph_lib/route.cpp > CMakeFiles/graph_test.dir/route.cpp.i
+CMakeFiles/graph_test.dir/route_xy.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/graph_test.dir/route_xy.cpp.i"
+	/usr/lib/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ghost/src/workspace/xmu/path_planning/graph_lib/route_xy.cpp > CMakeFiles/graph_test.dir/route_xy.cpp.i
 
-CMakeFiles/graph_test.dir/route.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/graph_test.dir/route.cpp.s"
-	/usr/lib/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ghost/src/workspace/xmu/path_planning/graph_lib/route.cpp -o CMakeFiles/graph_test.dir/route.cpp.s
+CMakeFiles/graph_test.dir/route_xy.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/graph_test.dir/route_xy.cpp.s"
+	/usr/lib/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ghost/src/workspace/xmu/path_planning/graph_lib/route_xy.cpp -o CMakeFiles/graph_test.dir/route_xy.cpp.s
 
-CMakeFiles/graph_test.dir/route.cpp.o.requires:
+CMakeFiles/graph_test.dir/route_xy.cpp.o.requires:
 
-.PHONY : CMakeFiles/graph_test.dir/route.cpp.o.requires
+.PHONY : CMakeFiles/graph_test.dir/route_xy.cpp.o.requires
 
-CMakeFiles/graph_test.dir/route.cpp.o.provides: CMakeFiles/graph_test.dir/route.cpp.o.requires
-	$(MAKE) -f CMakeFiles/graph_test.dir/build.make CMakeFiles/graph_test.dir/route.cpp.o.provides.build
-.PHONY : CMakeFiles/graph_test.dir/route.cpp.o.provides
+CMakeFiles/graph_test.dir/route_xy.cpp.o.provides: CMakeFiles/graph_test.dir/route_xy.cpp.o.requires
+	$(MAKE) -f CMakeFiles/graph_test.dir/build.make CMakeFiles/graph_test.dir/route_xy.cpp.o.provides.build
+.PHONY : CMakeFiles/graph_test.dir/route_xy.cpp.o.provides
 
-CMakeFiles/graph_test.dir/route.cpp.o.provides.build: CMakeFiles/graph_test.dir/route.cpp.o
+CMakeFiles/graph_test.dir/route_xy.cpp.o.provides.build: CMakeFiles/graph_test.dir/route_xy.cpp.o
+
+
+CMakeFiles/graph_test.dir/route_d.cpp.o: CMakeFiles/graph_test.dir/flags.make
+CMakeFiles/graph_test.dir/route_d.cpp.o: ../route_d.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ghost/src/workspace/xmu/path_planning/graph_lib/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/graph_test.dir/route_d.cpp.o"
+	/usr/lib/ccache/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/graph_test.dir/route_d.cpp.o -c /home/ghost/src/workspace/xmu/path_planning/graph_lib/route_d.cpp
+
+CMakeFiles/graph_test.dir/route_d.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/graph_test.dir/route_d.cpp.i"
+	/usr/lib/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ghost/src/workspace/xmu/path_planning/graph_lib/route_d.cpp > CMakeFiles/graph_test.dir/route_d.cpp.i
+
+CMakeFiles/graph_test.dir/route_d.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/graph_test.dir/route_d.cpp.s"
+	/usr/lib/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ghost/src/workspace/xmu/path_planning/graph_lib/route_d.cpp -o CMakeFiles/graph_test.dir/route_d.cpp.s
+
+CMakeFiles/graph_test.dir/route_d.cpp.o.requires:
+
+.PHONY : CMakeFiles/graph_test.dir/route_d.cpp.o.requires
+
+CMakeFiles/graph_test.dir/route_d.cpp.o.provides: CMakeFiles/graph_test.dir/route_d.cpp.o.requires
+	$(MAKE) -f CMakeFiles/graph_test.dir/build.make CMakeFiles/graph_test.dir/route_d.cpp.o.provides.build
+.PHONY : CMakeFiles/graph_test.dir/route_d.cpp.o.provides
+
+CMakeFiles/graph_test.dir/route_d.cpp.o.provides.build: CMakeFiles/graph_test.dir/route_d.cpp.o
 
 
 CMakeFiles/graph_test.dir/main.cpp.o: CMakeFiles/graph_test.dir/flags.make
 CMakeFiles/graph_test.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ghost/src/workspace/xmu/path_planning/graph_lib/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/graph_test.dir/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ghost/src/workspace/xmu/path_planning/graph_lib/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/graph_test.dir/main.cpp.o"
 	/usr/lib/ccache/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/graph_test.dir/main.cpp.o -c /home/ghost/src/workspace/xmu/path_planning/graph_lib/main.cpp
 
 CMakeFiles/graph_test.dir/main.cpp.i: cmake_force
@@ -157,7 +181,8 @@ CMakeFiles/graph_test.dir/main.cpp.o.provides.build: CMakeFiles/graph_test.dir/m
 graph_test_OBJECTS = \
 "CMakeFiles/graph_test.dir/graph_simple.cpp.o" \
 "CMakeFiles/graph_test.dir/graph_weighted.cpp.o" \
-"CMakeFiles/graph_test.dir/route.cpp.o" \
+"CMakeFiles/graph_test.dir/route_xy.cpp.o" \
+"CMakeFiles/graph_test.dir/route_d.cpp.o" \
 "CMakeFiles/graph_test.dir/main.cpp.o"
 
 # External object files for target graph_test
@@ -165,7 +190,8 @@ graph_test_EXTERNAL_OBJECTS =
 
 graph_test: CMakeFiles/graph_test.dir/graph_simple.cpp.o
 graph_test: CMakeFiles/graph_test.dir/graph_weighted.cpp.o
-graph_test: CMakeFiles/graph_test.dir/route.cpp.o
+graph_test: CMakeFiles/graph_test.dir/route_xy.cpp.o
+graph_test: CMakeFiles/graph_test.dir/route_d.cpp.o
 graph_test: CMakeFiles/graph_test.dir/main.cpp.o
 graph_test: CMakeFiles/graph_test.dir/build.make
 graph_test: /usr/local/lib/libopencv_videostab.so.2.4.13
@@ -188,7 +214,7 @@ graph_test: /usr/local/lib/libopencv_imgproc.so.2.4.13
 graph_test: /usr/local/lib/libopencv_flann.so.2.4.13
 graph_test: /usr/local/lib/libopencv_core.so.2.4.13
 graph_test: CMakeFiles/graph_test.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ghost/src/workspace/xmu/path_planning/graph_lib/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable graph_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ghost/src/workspace/xmu/path_planning/graph_lib/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable graph_test"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/graph_test.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -198,7 +224,8 @@ CMakeFiles/graph_test.dir/build: graph_test
 
 CMakeFiles/graph_test.dir/requires: CMakeFiles/graph_test.dir/graph_simple.cpp.o.requires
 CMakeFiles/graph_test.dir/requires: CMakeFiles/graph_test.dir/graph_weighted.cpp.o.requires
-CMakeFiles/graph_test.dir/requires: CMakeFiles/graph_test.dir/route.cpp.o.requires
+CMakeFiles/graph_test.dir/requires: CMakeFiles/graph_test.dir/route_xy.cpp.o.requires
+CMakeFiles/graph_test.dir/requires: CMakeFiles/graph_test.dir/route_d.cpp.o.requires
 CMakeFiles/graph_test.dir/requires: CMakeFiles/graph_test.dir/main.cpp.o.requires
 
 .PHONY : CMakeFiles/graph_test.dir/requires

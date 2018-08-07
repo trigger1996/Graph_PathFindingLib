@@ -1,6 +1,6 @@
-#include "include/route.h"
+#include "include/route_xy.h"
 
-void __route::get_R(vector<Point2f> &out) {
+void __route_xy::get_Route(vector<Point2f> &out) {
 
     out.clear();
     // 这边为了求稳，采用单个赋值，没有用等号
@@ -10,7 +10,7 @@ void __route::get_R(vector<Point2f> &out) {
 
 }
 
-uint32_t __route::set_R(vector<Point2f> in) {
+uint32_t __route_xy::set_Route(vector<Point2f> in) {
 
     clear();
     for (int i = 0; i < in.size(); i++)
@@ -18,35 +18,28 @@ uint32_t __route::set_R(vector<Point2f> in) {
     waypt_num = r.size();
 }
 
-uint32_t __route::add_WayPt(Point2f in) {
+uint32_t __route_xy::add_WayPt(Point2f in) {
 
     r.push_back(in);
     waypt_num++;
 }
 
-uint32_t __route::self_Optimization() {
-    // 消除路径中重复的路段，慎用
-    int i, j;
-
-
-    for (i = 0; i < r.size(); i++) {
-        for (j = i + 1; j < r.size(); j++) {
-
-        }
-    }
+void __route_xy::remove_Last_WayPt() {
+    r.pop_back();
+    waypt_num--;
 }
 
-void __route::reset_StartPt(Point2f startpt) {
+void __route_xy::reset_StartPt(Point2f startpt) {
     clear();
     r.push_back(startpt);
     waypt_num = 1;
 }
 
-void __route::clear() {
+void __route_xy::clear() {
     r.clear();
     waypt_num = 0;
 }
 
-void __route::print() {
+void __route_xy::print() {
     cout << r << endl << endl;
 }

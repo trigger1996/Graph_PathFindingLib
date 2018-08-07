@@ -148,5 +148,22 @@ static inline Vec4f AdjMatPos_2_GraphGrid2(__graph_abstract *graph, uint32_t sta
     return pt2;
 }
 
+static inline double calc_Dist_Manhattan(Point2f pt1, Point2f pt2) {
+    return fabs(pt2.y - pt1.y) + fabs(pt2.x - pt1.x);
+}
+
+static inline double calc_Dist_Euclidean(Point2f pt1, Point2f pt2) {
+    double dx, dy;
+    dx = pt2.x - pt1.x;
+    dy = pt2.y - pt1.y;
+    return sqrt(dx * dx + dy * dy);
+}
+
+static inline double calc_Dist_Chebyshev(Point2f pt1, Point2f pt2) {
+    double dx, dy;
+    dx = pt2.x - pt1.x;
+    dy = pt2.y - pt1.y;
+    return max(dx, dy);
+}
 
 #endif  // __Graph_Abstract_HPP

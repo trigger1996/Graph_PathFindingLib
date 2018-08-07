@@ -105,45 +105,71 @@ CMakeFiles/simple_graph_libs.dir/graph_weighted.cpp.o.provides: CMakeFiles/simpl
 CMakeFiles/simple_graph_libs.dir/graph_weighted.cpp.o.provides.build: CMakeFiles/simple_graph_libs.dir/graph_weighted.cpp.o
 
 
-CMakeFiles/simple_graph_libs.dir/route.cpp.o: CMakeFiles/simple_graph_libs.dir/flags.make
-CMakeFiles/simple_graph_libs.dir/route.cpp.o: ../route.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ghost/src/workspace/xmu/path_planning/graph_lib/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/simple_graph_libs.dir/route.cpp.o"
-	/usr/lib/ccache/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/simple_graph_libs.dir/route.cpp.o -c /home/ghost/src/workspace/xmu/path_planning/graph_lib/route.cpp
+CMakeFiles/simple_graph_libs.dir/route_xy.cpp.o: CMakeFiles/simple_graph_libs.dir/flags.make
+CMakeFiles/simple_graph_libs.dir/route_xy.cpp.o: ../route_xy.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ghost/src/workspace/xmu/path_planning/graph_lib/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/simple_graph_libs.dir/route_xy.cpp.o"
+	/usr/lib/ccache/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/simple_graph_libs.dir/route_xy.cpp.o -c /home/ghost/src/workspace/xmu/path_planning/graph_lib/route_xy.cpp
 
-CMakeFiles/simple_graph_libs.dir/route.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/simple_graph_libs.dir/route.cpp.i"
-	/usr/lib/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ghost/src/workspace/xmu/path_planning/graph_lib/route.cpp > CMakeFiles/simple_graph_libs.dir/route.cpp.i
+CMakeFiles/simple_graph_libs.dir/route_xy.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/simple_graph_libs.dir/route_xy.cpp.i"
+	/usr/lib/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ghost/src/workspace/xmu/path_planning/graph_lib/route_xy.cpp > CMakeFiles/simple_graph_libs.dir/route_xy.cpp.i
 
-CMakeFiles/simple_graph_libs.dir/route.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/simple_graph_libs.dir/route.cpp.s"
-	/usr/lib/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ghost/src/workspace/xmu/path_planning/graph_lib/route.cpp -o CMakeFiles/simple_graph_libs.dir/route.cpp.s
+CMakeFiles/simple_graph_libs.dir/route_xy.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/simple_graph_libs.dir/route_xy.cpp.s"
+	/usr/lib/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ghost/src/workspace/xmu/path_planning/graph_lib/route_xy.cpp -o CMakeFiles/simple_graph_libs.dir/route_xy.cpp.s
 
-CMakeFiles/simple_graph_libs.dir/route.cpp.o.requires:
+CMakeFiles/simple_graph_libs.dir/route_xy.cpp.o.requires:
 
-.PHONY : CMakeFiles/simple_graph_libs.dir/route.cpp.o.requires
+.PHONY : CMakeFiles/simple_graph_libs.dir/route_xy.cpp.o.requires
 
-CMakeFiles/simple_graph_libs.dir/route.cpp.o.provides: CMakeFiles/simple_graph_libs.dir/route.cpp.o.requires
-	$(MAKE) -f CMakeFiles/simple_graph_libs.dir/build.make CMakeFiles/simple_graph_libs.dir/route.cpp.o.provides.build
-.PHONY : CMakeFiles/simple_graph_libs.dir/route.cpp.o.provides
+CMakeFiles/simple_graph_libs.dir/route_xy.cpp.o.provides: CMakeFiles/simple_graph_libs.dir/route_xy.cpp.o.requires
+	$(MAKE) -f CMakeFiles/simple_graph_libs.dir/build.make CMakeFiles/simple_graph_libs.dir/route_xy.cpp.o.provides.build
+.PHONY : CMakeFiles/simple_graph_libs.dir/route_xy.cpp.o.provides
 
-CMakeFiles/simple_graph_libs.dir/route.cpp.o.provides.build: CMakeFiles/simple_graph_libs.dir/route.cpp.o
+CMakeFiles/simple_graph_libs.dir/route_xy.cpp.o.provides.build: CMakeFiles/simple_graph_libs.dir/route_xy.cpp.o
+
+
+CMakeFiles/simple_graph_libs.dir/route_d.cpp.o: CMakeFiles/simple_graph_libs.dir/flags.make
+CMakeFiles/simple_graph_libs.dir/route_d.cpp.o: ../route_d.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ghost/src/workspace/xmu/path_planning/graph_lib/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/simple_graph_libs.dir/route_d.cpp.o"
+	/usr/lib/ccache/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/simple_graph_libs.dir/route_d.cpp.o -c /home/ghost/src/workspace/xmu/path_planning/graph_lib/route_d.cpp
+
+CMakeFiles/simple_graph_libs.dir/route_d.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/simple_graph_libs.dir/route_d.cpp.i"
+	/usr/lib/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ghost/src/workspace/xmu/path_planning/graph_lib/route_d.cpp > CMakeFiles/simple_graph_libs.dir/route_d.cpp.i
+
+CMakeFiles/simple_graph_libs.dir/route_d.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/simple_graph_libs.dir/route_d.cpp.s"
+	/usr/lib/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ghost/src/workspace/xmu/path_planning/graph_lib/route_d.cpp -o CMakeFiles/simple_graph_libs.dir/route_d.cpp.s
+
+CMakeFiles/simple_graph_libs.dir/route_d.cpp.o.requires:
+
+.PHONY : CMakeFiles/simple_graph_libs.dir/route_d.cpp.o.requires
+
+CMakeFiles/simple_graph_libs.dir/route_d.cpp.o.provides: CMakeFiles/simple_graph_libs.dir/route_d.cpp.o.requires
+	$(MAKE) -f CMakeFiles/simple_graph_libs.dir/build.make CMakeFiles/simple_graph_libs.dir/route_d.cpp.o.provides.build
+.PHONY : CMakeFiles/simple_graph_libs.dir/route_d.cpp.o.provides
+
+CMakeFiles/simple_graph_libs.dir/route_d.cpp.o.provides.build: CMakeFiles/simple_graph_libs.dir/route_d.cpp.o
 
 
 # Object files for target simple_graph_libs
 simple_graph_libs_OBJECTS = \
 "CMakeFiles/simple_graph_libs.dir/graph_simple.cpp.o" \
 "CMakeFiles/simple_graph_libs.dir/graph_weighted.cpp.o" \
-"CMakeFiles/simple_graph_libs.dir/route.cpp.o"
+"CMakeFiles/simple_graph_libs.dir/route_xy.cpp.o" \
+"CMakeFiles/simple_graph_libs.dir/route_d.cpp.o"
 
 # External object files for target simple_graph_libs
 simple_graph_libs_EXTERNAL_OBJECTS =
 
 libsimple_graph_libs.so: CMakeFiles/simple_graph_libs.dir/graph_simple.cpp.o
 libsimple_graph_libs.so: CMakeFiles/simple_graph_libs.dir/graph_weighted.cpp.o
-libsimple_graph_libs.so: CMakeFiles/simple_graph_libs.dir/route.cpp.o
+libsimple_graph_libs.so: CMakeFiles/simple_graph_libs.dir/route_xy.cpp.o
+libsimple_graph_libs.so: CMakeFiles/simple_graph_libs.dir/route_d.cpp.o
 libsimple_graph_libs.so: CMakeFiles/simple_graph_libs.dir/build.make
 libsimple_graph_libs.so: CMakeFiles/simple_graph_libs.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ghost/src/workspace/xmu/path_planning/graph_lib/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX shared library libsimple_graph_libs.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ghost/src/workspace/xmu/path_planning/graph_lib/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX shared library libsimple_graph_libs.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/simple_graph_libs.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -153,7 +179,8 @@ CMakeFiles/simple_graph_libs.dir/build: libsimple_graph_libs.so
 
 CMakeFiles/simple_graph_libs.dir/requires: CMakeFiles/simple_graph_libs.dir/graph_simple.cpp.o.requires
 CMakeFiles/simple_graph_libs.dir/requires: CMakeFiles/simple_graph_libs.dir/graph_weighted.cpp.o.requires
-CMakeFiles/simple_graph_libs.dir/requires: CMakeFiles/simple_graph_libs.dir/route.cpp.o.requires
+CMakeFiles/simple_graph_libs.dir/requires: CMakeFiles/simple_graph_libs.dir/route_xy.cpp.o.requires
+CMakeFiles/simple_graph_libs.dir/requires: CMakeFiles/simple_graph_libs.dir/route_d.cpp.o.requires
 
 .PHONY : CMakeFiles/simple_graph_libs.dir/requires
 

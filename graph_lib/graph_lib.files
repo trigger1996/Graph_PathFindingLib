@@ -12,3 +12,5 @@ include/graph_weighted.h
 graph_weighted.cpp
 route_xy.cpp
 include/route_xy.h
+include/route_d.h
+route_d.cpp
