@@ -1,0 +1,1 @@
+/usr/lib/ccache/c++  -fPIC   -shared -Wl,-soname,libsimple_graph_libs.so -o libsimple_graph_libs.so CMakeFiles/simple_graph_libs.dir/graph_simple.cpp.o CMakeFiles/simple_graph_libs.dir/graph_weighted.cpp.o 
