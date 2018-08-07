@@ -16,6 +16,7 @@ ${Pangolin_INCLUDE_DIRS}
 add_executable(graph_test
 graph_simple.cpp
 graph_weighted.cpp
+route.cpp
 main.cpp
 )
 
@@ -27,4 +28,5 @@ ${EIGEN3_LIBS}
 add_library(${PROJECT_NAME} SHARED
 graph_simple.cpp
 graph_weighted.cpp
+route.cpp
 )

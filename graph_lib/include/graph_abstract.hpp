@@ -49,6 +49,8 @@ public:
 
     MatrixXd get_AdjMat_Rec() { return D_rec; }                             // 读取邻接矩阵倒数
 
+    Mat get_Img() { return img.clone(); }                                   // 读取图像矩阵
+
     uint32_t get_x_max() {                                                  // 返回矩阵列数
         x_max = graphMat.cols();
         return x_max;
@@ -125,22 +127,23 @@ static inline Point2f AdjMatGrid_2_GraphGrid(__graph_abstract *graph, uint32_t i
     return pt;
 }
 
-static inline Vector4f AdjMatPos_2_GraphGrid2(__graph_abstract *graph, uint32_t x_in, uint32_t y_in) {
+static inline Vec4f AdjMatPos_2_GraphGrid2(__graph_abstract *graph, uint32_t startpos, uint32_t endpos) {
     // 邻接矩阵中的点与图中坐标转换
     // 返回值形式(x0, y0, x1, y1)
     // 其中(x0, y0)是起始点坐标，(x1, y1)是目标点坐标
-    Vector4f pt2;
+    // 如果输入邻接矩阵, startpos对应y，endpos对应x
+    Vec4f pt2;
     uint32_t x_max, y_max;
 
     x_max = graph->get_x_max();
     y_max = graph->get_y_max();
-    if (x_in >= x_max * y_max || y_in >= x_max * y_max)
-        return Vector4f(-1., -1., -1., -1.);
+    if (startpos >= x_max * y_max || endpos >= x_max * y_max)
+        return Vec4f(-1., -1., -1., -1.);
 
-    pt2[0] = y_in % x_max;
-    pt2[1] = y_in / x_max;
-    pt2[2] = x_in % x_max;
-    pt2[3] = x_in / x_max;
+    pt2[0] = startpos % x_max;
+    pt2[1] = startpos / x_max;
+    pt2[2] = endpos   % x_max;
+    pt2[3] = endpos   / x_max;
 
     return pt2;
 }
