@@ -17,8 +17,10 @@ MatrixXd __graph_simple::calc_AdjacencyMatrix() {
                             uint32_t dx, dy;
                             dx = abs(x1 - x0);
                             dy = abs(y1 - y0);
-                            if (dx + dy == 1 || (dx == 1 && dy == 1))
+                            if (dx + dy == 1)
                                 D(x0 + y0 * x_max, x1 + y1 * x_max) = 1;
+                            else if (dx == 1 && dy == 1)
+                                D(x0 + y0 * x_max, x1 + y1 * x_max) = 1;            // 1.414
                         }
                     }
                 }
