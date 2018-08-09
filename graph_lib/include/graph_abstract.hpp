@@ -111,6 +111,19 @@ protected:
 
 };
 
+static inline int32_t GraphGrid_2_AdjMatGrid(__graph_abstract *graph, Point2f in) {
+    // 地图笛卡尔坐标转邻接矩阵坐标
+    uint32_t x_max, y_max;
+
+    x_max = graph->get_x_max();
+    y_max = graph->get_y_max();
+
+    if (in.x > x_max || in.y > y_max)
+        return -1;
+    else
+        return in.x + in.y * x_max;
+}
+
 static inline Point2f AdjMatGrid_2_GraphGrid(__graph_abstract *graph, uint32_t in) {
     // 邻接矩阵中的单值坐标与图中坐标转换
     Point2f pt;
@@ -148,11 +161,39 @@ static inline Vec4f AdjMatPos_2_GraphGrid2(__graph_abstract *graph, uint32_t sta
     return pt2;
 }
 
+inline void get_AdjacencyPt(MatrixXd D, int32_t pt_d, vector<int32_t> &list) {
+    // 从邻接矩阵中获得连通点，返回邻接矩阵坐标队列
+    int i;
+
+    list.clear();
+    for (i = 0; i < D.cols(); i++) {
+        if (D(pt_d, i) != 0) {
+            list.push_back(i);
+        }
+    }
+}
+
+inline void get_AdjacencyPt(__graph_abstract *graph, MatrixXd D, Point2f pt, vector<Point2f> &list) {
+    // 从邻接矩阵中获得连通点，返回邻接矩阵坐标队列
+    int i;
+    int32_t pt_d, temp_pt;
+    pt_d = GraphGrid_2_AdjMatGrid(graph, pt);
+
+    list.clear();
+    for (i = 0; i < D.cols(); i++) {
+        if (D(pt_d, i) != 0) {
+            list.push_back(AdjMatGrid_2_GraphGrid(graph, i));
+        }
+    }
+}
+
 static inline double calc_Dist_Manhattan(Point2f pt1, Point2f pt2) {
+    // 计算曼哈顿距离
     return fabs(pt2.y - pt1.y) + fabs(pt2.x - pt1.x);
 }
 
 static inline double calc_Dist_Euclidean(Point2f pt1, Point2f pt2) {
+    // 计算欧式距离
     double dx, dy;
     dx = pt2.x - pt1.x;
     dy = pt2.y - pt1.y;
@@ -160,6 +201,7 @@ static inline double calc_Dist_Euclidean(Point2f pt1, Point2f pt2) {
 }
 
 static inline double calc_Dist_Chebyshev(Point2f pt1, Point2f pt2) {
+    // 计算切比雪夫距离
     double dx, dy;
     dx = pt2.x - pt1.x;
     dy = pt2.y - pt1.y;
