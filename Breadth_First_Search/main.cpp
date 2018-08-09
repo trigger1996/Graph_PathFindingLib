@@ -18,18 +18,18 @@ typedef enum {
     unvisited = 0,
     visited   = 1,
     adjacent_pts_visited = 2,
-} __visit_status;
+} __visit_status;                   // 访问状态
 
 typedef struct {
-    Point2f grid;       // 当前结点坐标
-    int32_t grid_d;
+    Point2f grid;                   // 当前节点坐标，笛卡尔坐标
+    int32_t grid_d;                 // 当前节点坐标，邻接矩阵坐标
 
-    Point2f grid_p;                 // 前驱结点
-    int32_t grid_pd;
+    Point2f grid_p;                 // 前驱节点坐标，笛卡尔坐标
+    int32_t grid_pd;                // 前驱节点坐标，邻接矩阵坐标
 
     double dist;                    // 距离起始点距离
 
-    __visit_status is_visited;      // 是否被访问过
+    __visit_status is_visited;      // 是否被访问过，后面发现这个变量不是很有用，因为基本用不着
 } __bfs_node;
 
 MatrixXd       _D;
@@ -39,17 +39,17 @@ Point2f endPos(9, 9);
 
 vector<__bfs_node> bfs_q;           // bfs_quene
 
-inline int32_t Pos_xy_2_D(Point2f xy);
-inline void get_AdjacencyPt(MatrixXd D, int32_t pt_d, vector<int32_t> &lists);
+inline int32_t Pos_xy_2_D(Point2f xy);                                          // 笛卡尔坐标转邻接矩阵坐标
+inline void get_AdjacencyPt(MatrixXd D, int32_t pt_d, vector<int32_t> &lists);  // 搜索邻接矩阵，获得相通点
 
-void bfs_Push(Point2f pt, Point2f pt_past);
-void bfs_Push(int32_t pt_d, int32_t pt_past_d);
+void bfs_Push(Point2f pt, Point2f pt_past);                                     // 向主队列中加入新的节点，并设置该节点的前驱节点，笛卡尔坐标
+void bfs_Push(int32_t pt_d, int32_t pt_past_d);                                 // 向主队列中加入新的节点，并设置该节点的前驱节点，邻接矩阵坐标
 void bfs_PushStart(Point2f start);
-void bfs_Copy(vector<__bfs_node> src, vector<__bfs_node> &dst);
-inline __bfs_node grid_xy_2_bfsnode(Point2f pt, Point2f pt_past);
-inline __bfs_node grid_D_2_bfsnode(int32_t pt_d, int32_t pt_past_d);
-inline  int32_t bfs_Find_Node_by_Info(vector<__bfs_node> array, __bfs_node target);
-inline int32_t bfs_Find_Node_by_Grid(vector<__bfs_node> array, Point2f target);
+void bfs_Copy(vector<__bfs_node> src, vector<__bfs_node> &dst);                 // 复制队列
+inline __bfs_node grid_xy_2_bfsnode(Point2f pt, Point2f pt_past);               // 坐标转换节点，并设置前驱节点，笛卡尔坐标
+inline __bfs_node grid_D_2_bfsnode(int32_t pt_d, int32_t pt_past_d);            // 坐标转换节点，并设置前驱节点，邻接矩阵坐标
+inline  int32_t bfs_Find_Node_by_Info(vector<__bfs_node> array, __bfs_node target); // 在队列中根据节点信息，查找坐标相同的点，并返回其序号，找不到返回-1
+inline int32_t bfs_Find_Node_by_Grid(vector<__bfs_node> array, Point2f target);     // 在队列中根据坐标，查找坐标相同的点，并返回其序号，找不到返回-1
 
 int main(void) {
 
@@ -90,11 +90,11 @@ https://blog.csdn.net/sallyxyl1993/article/details/57077512
 
 */
 
-    /// 步骤1: 将起点入队
+    /// 将起点入队
     bfs_PushStart(startPos);
 
     i = 0;
-  while (true) {                                                // bfs_q.size()
+  while (true) {                                                // bfs_q.size()，因为这部没有弹出队列，所以这个值不可能为空，这里其实操作失误了
         vector<__bfs_node> temp_q;
         vector<int32_t> list;
 
@@ -104,8 +104,10 @@ https://blog.csdn.net/sallyxyl1993/article/details/57077512
 
         bfs_Copy(bfs_q, temp_q);
         for (i = 0; i < temp_q.size(); i++) {
+            /// 选择一个点作为当前节点
             currentPt = temp_q[i];
 
+            /// 添加当前点附近，未被访问的节点，并设置其前驱节点为当前点
             list.clear();
             pt_to_add.clear();
             get_AdjacencyPt(_D, currentPt.grid_d, list);        // 获得当前点的邻接点
@@ -120,28 +122,32 @@ https://blog.csdn.net/sallyxyl1993/article/details/57077512
                     bfs_q.push_back(temp_node);                 // 当前点邻接点添加进队列
                 }
             }
+            /// 设置当前节点状态，其实这步没必要
             int32_t index = bfs_Find_Node_by_Info(bfs_q, currentPt);
             bfs_q[index].is_visited = adjacent_pts_visited;     // 当前结点连接的所有结点都已经访问过
         }
 
+        /// 对于深度优先搜索，找到终点就可以退出了
         if (bfs_Find_Node_by_Grid(bfs_q, endPos) != -1)
             break;
 
     }
 
-    /// 打印路径
+    /// 使用前驱节点回溯
+    /// 即通过终点的前驱节点找到上一个点，再通过其前驱节点找到再上一个点，直至找到起点，这就是最短路径
     vector<__bfs_node> route;
-    __bfs_node temp_node;
+    //__bfs_node temp_node;
     route.clear();
 
     i = bfs_Find_Node_by_Grid(bfs_q, endPos);                   // 压入第一个点
     route.push_back(bfs_q[i]);
     while (route[route.size() - 1].grid_pd >= 0) {
-        i = bfs_Find_Node_by_Grid(bfs_q, route[route.size() - 1].grid_p);
-        route.push_back(bfs_q[i]);
+        i = bfs_Find_Node_by_Grid(bfs_q, route[route.size() - 1].grid_p);   // 根据前驱节点坐标获得上一节点
+        route.push_back(bfs_q[i]);                                          // 将上一节点入队
     }
 
 
+    /// 打印路径
     for (i = 0; i < route.size(); i++)
         cout << route[i].grid << endl;
 
