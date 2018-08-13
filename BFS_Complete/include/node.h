@@ -41,7 +41,6 @@ public:
         _grid_pd = GraphGrid_2_AdjMatGrid(_map_t, pt_past);
 
         delete _map_t;
-
         calc_Dist_2_Past();
         _dist_2_start = -1e6;
     }
@@ -89,7 +88,9 @@ public:
     }
 
     /// 析构函数
-    ~__node();
+    ~__node() {
+
+    }
 
     /// 获得数据
     //int32_t map_x()       { return _map_x;   }
@@ -122,6 +123,27 @@ public:
         return _dist_2_past;
     }
 
+    /// 运算符重载
+    inline __node& operator =(__node src) {             // 重载赋值运算符
+        this->_grid    = src.grid();
+        this->_grid_d  = src.grid_d();
+        this->_grid_p  = src.grid_p();
+        this->_grid_pd = src.grid_pd();
+
+        this->_dist_2_past  = src.dist_2_pass();
+        this->_dist_2_start = src.dist_2_start();
+    }
+
+    inline bool operator ==(__node src) {               // 重载相等判断运算符
+        if ((this->_grid    == src.grid() ||            // &&
+             this->_grid_d  == src.grid_d()) &&
+            (this->_grid_p  == src.grid_p() ||          // &&
+             this->_grid_pd == src.grid_pd()))
+            return true;
+        else
+            return false;
+    }
+
 protected:
 
     //int32_t _map_x, _map_y;                           // 地图长宽
@@ -152,6 +174,13 @@ public:
     /// 析构函数
     ~__node_q();
 
+    /// 重置队列
+    void reset(int32_t map_x, int32_t map_y) {
+        _map_x = map_x;
+        _map_y = map_y;
+        _q.clear();
+    }
+
     /// 获得数据
     vector<__node> get_Quene() { return _q; }                           // 获得队列
 
@@ -160,18 +189,25 @@ public:
     int32_t        get_Map_Y() { return _map_y; }                       // 获得地图宽度
 
     /// 复制队列
-    vector<__node> copy(vector<__node> &dst);
+    void copy(vector<__node> &dst);
 
-    vector<__node> copy(__node_q &dst);
+    void copy(__node_q &dst);
 
     /// 添加删除操作
-    int32_t pushBack(__node in);
+    int32_t pushBack(__node in);                                        // 添加一个新元素，并将上一个元素作为其前驱节点，下同
 
     int32_t pushBack(Point2f in);
 
     int32_t pushBack(int32_t in);
 
-    int32_t popFront();                                                 // 删除最前端元素
+    int32_t pushBack(__node in,  __node in_passed);                     // 添加一个新元素，并独立设置其前驱节点，下同
+
+    int32_t pushBack(Point2f in, Point2f in_passed);
+
+    int32_t pushBack(int32_t in, int32_t in_passed);
+
+
+    __node  popFront();                                                 // 删除最前端元素
 
     int32_t popElement(int32_t index);                                  // 删除某一个元素，输入参数为该元素标号
 
@@ -182,7 +218,22 @@ public:
 
     int32_t find_Element_by_Grid(Point2f target);                       // 根据节点笛卡尔坐标查找坐标相同的点，返回下标，找不到则返回-1
 
-    int32_t find_Element_by_Grid(int32_t traget);                       // 根据节点邻接矩阵坐标查找坐标相同的点，返回下标，找不到则返回-1
+    int32_t find_Element_by_Grid(int32_t target);                       // 根据节点邻接矩阵坐标查找坐标相同的点，返回下标，找不到则返回-1
+
+    /// 运算符重载
+    inline __node_q& operator =(__node_q src) {                         // 重载赋值运算符
+       // 运算符最好不要写在.cpp里，好像会报warning
+       this->_map_x = src.get_Map_X();
+       this->_map_y = src.get_Map_Y();
+
+       vector<__node> q_temp = src.get_Quene();
+       this->_q.clear();
+       for (int i = 0; i < q_temp.size(); i++)
+           _q.push_back(q_temp[i]);
+    }
+
+    /// 显示操作
+    void print();                                                       // 通过终端界面打印队列
 
 protected:
 

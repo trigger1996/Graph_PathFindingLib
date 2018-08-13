@@ -39,17 +39,17 @@ Point2f endPos(9, 9);
 
 vector<__bfs_node> bfs_q;           // bfs_quene
 
-inline int32_t Pos_xy_2_D(Point2f xy);                                          // 笛卡尔坐标转邻接矩阵坐标
-inline void get_AdjacencyPt(MatrixXd D, int32_t pt_d, vector<int32_t> &lists);  // 搜索邻接矩阵，获得相通点
+inline int32_t Pos_xy_2_D(Point2f xy);                                              // 笛卡尔坐标转邻接矩阵坐标
+//inline void get_AdjacencyPt(MatrixXd D, int32_t pt_d, vector<int32_t> &lists);    // 搜索邻接矩阵，获得相通点
 
-void bfs_Push(Point2f pt, Point2f pt_past);                                     // 向主队列中加入新的节点，并设置该节点的前驱节点，笛卡尔坐标
-void bfs_Push(int32_t pt_d, int32_t pt_past_d);                                 // 向主队列中加入新的节点，并设置该节点的前驱节点，邻接矩阵坐标
+void bfs_Push(Point2f pt, Point2f pt_past);                                          // 向主队列中加入新的节点，并设置该节点的前驱节点，笛卡尔坐标
+void bfs_Push(int32_t pt_d, int32_t pt_past_d);                                      // 向主队列中加入新的节点，并设置该节点的前驱节点，邻接矩阵坐标
 void bfs_PushStart(Point2f start);
-void bfs_Copy(vector<__bfs_node> src, vector<__bfs_node> &dst);                 // 复制队列
-inline __bfs_node grid_xy_2_bfsnode(Point2f pt, Point2f pt_past);               // 坐标转换节点，并设置前驱节点，笛卡尔坐标
-inline __bfs_node grid_D_2_bfsnode(int32_t pt_d, int32_t pt_past_d);            // 坐标转换节点，并设置前驱节点，邻接矩阵坐标
-inline  int32_t bfs_Find_Node_by_Info(vector<__bfs_node> array, __bfs_node target); // 在队列中根据节点信息，查找坐标相同的点，并返回其序号，找不到返回-1
-inline int32_t bfs_Find_Node_by_Grid(vector<__bfs_node> array, Point2f target);     // 在队列中根据坐标，查找坐标相同的点，并返回其序号，找不到返回-1
+void bfs_Copy(vector<__bfs_node> src, vector<__bfs_node> &dst);                      // 复制队列
+inline __bfs_node grid_xy_2_bfsnode(Point2f pt, Point2f pt_past);                    // 坐标转换节点，并设置前驱节点，笛卡尔坐标
+inline __bfs_node grid_D_2_bfsnode(int32_t pt_d, int32_t pt_past_d);                 // 坐标转换节点，并设置前驱节点，邻接矩阵坐标
+inline  int32_t bfs_Find_Node_by_Info(vector<__bfs_node> array, __bfs_node target);  // 在队列中根据节点信息，查找坐标相同的点，并返回其序号，找不到返回-1
+inline int32_t bfs_Find_Node_by_Grid(vector<__bfs_node> array, Point2f target);      // 在队列中根据坐标，查找坐标相同的点，并返回其序号，找不到返回-1
 
 int main(void) {
 
@@ -127,7 +127,7 @@ https://blog.csdn.net/sallyxyl1993/article/details/57077512
             bfs_q[index].is_visited = adjacent_pts_visited;     // 当前结点连接的所有结点都已经访问过
         }
 
-        /// 对于深度优先搜索，找到终点就可以退出了
+        /// 对于广度优先搜索，找到终点就可以退出了
         if (bfs_Find_Node_by_Grid(bfs_q, endPos) != -1)
             break;
 
@@ -160,6 +160,7 @@ inline int32_t Pos_xy_2_D(Point2f xy) {
     return xy.x + xy.y * l;
 }
 
+/*
 inline void get_AdjacencyPt(MatrixXd D, int32_t pt_d, vector<int32_t> &lists) {
     int i;
 
@@ -170,6 +171,7 @@ inline void get_AdjacencyPt(MatrixXd D, int32_t pt_d, vector<int32_t> &lists) {
         }
     }
 }
+*/
 
 void bfs_Push(Point2f pt, Point2f pt_past) {
     __bfs_node temp;

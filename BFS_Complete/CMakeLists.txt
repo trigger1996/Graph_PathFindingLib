@@ -22,7 +22,6 @@ add_executable(${PROJECT_NAME}
 main.cpp
 node.cpp
 graph_simple_w_bfs.cpp
-graph_weighted_w_bfs.cpp
 )
 
 target_link_libraries(${PROJECT_NAME}

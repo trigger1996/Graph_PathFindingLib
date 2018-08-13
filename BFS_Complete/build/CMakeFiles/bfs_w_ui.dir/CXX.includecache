@@ -10,9 +10,9 @@
 include/graph_simple_w_bfs.h
 /home/ghost/src/workspace/xmu/path_planning/BFS_Complete/include/graph_simple_w_bfs.h
 
-/home/ghost/src/workspace/xmu/path_planning/BFS_Complete/graph_weighted_w_bfs.cpp
-
 /home/ghost/src/workspace/xmu/path_planning/BFS_Complete/include/graph_simple_w_bfs.h
+node.h
+/home/ghost/src/workspace/xmu/path_planning/BFS_Complete/include/node.h
 iostream
 -
 algorithm
@@ -49,6 +49,10 @@ opencv2/opencv.hpp
 /home/ghost/src/workspace/xmu/path_planning/BFS_Complete/main.cpp
 iostream
 -
+eigen3/Eigen/Dense
+-
+include/graph_simple_w_bfs.h
+/home/ghost/src/workspace/xmu/path_planning/BFS_Complete/include/graph_simple_w_bfs.h
 
 /home/ghost/src/workspace/xmu/path_planning/BFS_Complete/node.cpp
 include/node.h

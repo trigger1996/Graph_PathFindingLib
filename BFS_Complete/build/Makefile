@@ -150,33 +150,6 @@ graph_simple_w_bfs.cpp.s:
 	$(MAKE) -f CMakeFiles/bfs_w_ui.dir/build.make CMakeFiles/bfs_w_ui.dir/graph_simple_w_bfs.cpp.s
 .PHONY : graph_simple_w_bfs.cpp.s
 
-graph_weighted_w_bfs.o: graph_weighted_w_bfs.cpp.o
-
-.PHONY : graph_weighted_w_bfs.o
-
-# target to build an object file
-graph_weighted_w_bfs.cpp.o:
-	$(MAKE) -f CMakeFiles/bfs_w_ui.dir/build.make CMakeFiles/bfs_w_ui.dir/graph_weighted_w_bfs.cpp.o
-.PHONY : graph_weighted_w_bfs.cpp.o
-
-graph_weighted_w_bfs.i: graph_weighted_w_bfs.cpp.i
-
-.PHONY : graph_weighted_w_bfs.i
-
-# target to preprocess a source file
-graph_weighted_w_bfs.cpp.i:
-	$(MAKE) -f CMakeFiles/bfs_w_ui.dir/build.make CMakeFiles/bfs_w_ui.dir/graph_weighted_w_bfs.cpp.i
-.PHONY : graph_weighted_w_bfs.cpp.i
-
-graph_weighted_w_bfs.s: graph_weighted_w_bfs.cpp.s
-
-.PHONY : graph_weighted_w_bfs.s
-
-# target to generate assembly for a file
-graph_weighted_w_bfs.cpp.s:
-	$(MAKE) -f CMakeFiles/bfs_w_ui.dir/build.make CMakeFiles/bfs_w_ui.dir/graph_weighted_w_bfs.cpp.s
-.PHONY : graph_weighted_w_bfs.cpp.s
-
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -243,9 +216,6 @@ help:
 	@echo "... graph_simple_w_bfs.o"
 	@echo "... graph_simple_w_bfs.i"
 	@echo "... graph_simple_w_bfs.s"
-	@echo "... graph_weighted_w_bfs.o"
-	@echo "... graph_weighted_w_bfs.i"
-	@echo "... graph_weighted_w_bfs.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
