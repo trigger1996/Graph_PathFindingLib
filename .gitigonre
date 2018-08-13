@@ -1,2 +1,8 @@
 *.o
+*.cmake
+*.out
+Makefile
+Makefile.*
+
 build/
+*/build/
