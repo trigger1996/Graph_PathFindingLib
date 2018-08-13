@@ -138,79 +138,90 @@ typedef enum {
 } __dir_flag;
 
 void __graph_simple_bfs::print_Img_with_Route() {
-    int x, y, i;
+    int x, y, i, j;
     Point2f way_pt, way_pt_last;
+    bool is_this_point_route = false;
 
     way_pt = way_pt_last = _startPos;
     i = 0;
     for (y = 0; y < graphMat.cols(); y++) {
         for (x = 0; x < graphMat.rows(); x++) {
-            if (route->get_Quene()[i].grid() == Point2f(x, y)) {
-                // 迭代更新路径点
-                way_pt_last = way_pt;
-                way_pt = Point2f(x, y);
+            for (i = 0; i < route->get_Quene().size(); i++) {
+                // 遇到每个点都检查一遍是不死路径，否则很容易画错
+                if (route->get_Quene()[i].grid() == Point2f(x, y)) {
+                    // 迭代更新路径点
+                    if (i == 0)
+                        way_pt = way_pt_last = Point2f(x, y);               // 第一个点没有前驱节点，直接用i - 1会爆炸
+                    else {
+                        way_pt      = route->get_Quene()[i].grid();
+                        way_pt_last = route->get_Quene()[i - 1].grid();
+                    }
 
-                __dir_flag dir;
-                if (way_pt.x > way_pt_last.x) {
-                    if (way_pt.y > way_pt_last.y)
-                        dir = _down_right;
-                    else if (way_pt.y == way_pt_last.y)
-                        dir = _right;
-                    else if (way_pt.y <  way_pt_last.y)
-                        dir = _up_right;
+                    __dir_flag dir;
+                    if (way_pt.x > way_pt_last.x) {
+                        if (way_pt.y > way_pt_last.y)
+                            dir = _down_right;
+                        else if (way_pt.y == way_pt_last.y)
+                            dir = _right;
+                        else if (way_pt.y <  way_pt_last.y)
+                            dir = _up_right;
+                    }
+                    else if (way_pt.x == way_pt_last.x) {
+                        if (way_pt.y > way_pt_last.y)
+                            dir = _down;
+                        else if (way_pt.y == way_pt_last.y)
+                            dir = _no_dir;
+                        else if (way_pt.y <  way_pt_last.y)
+                            dir = _up;
+                    }
+                    else if (way_pt.x < way_pt_last.x) {
+                        if (way_pt.y > way_pt_last.y)
+                            dir = _down_left;
+                        else if (way_pt.y == way_pt_last.y)
+                            dir = _left;
+                        else if (way_pt.y <  way_pt_last.y)
+                            dir = _up_left;
+                    }
+
+                    switch (dir) {
+                        case _up   :
+                        case _down :
+                            printf("| ");
+                            break;
+
+                        case _right :
+                        case _left  :
+                            printf("- ");
+                            break;
+
+                        case _up_right  :
+                        case _down_left :
+                             printf("/ ");
+                            break;
+
+                        case _down_right :
+                        case _up_left :
+                            printf("\\ ");
+                            break;
+
+                        case _no_dir :
+                            printf("* ");
+                            break;
+
+                        default : break;
+                    }
+                is_this_point_route = true;
                 }
-                else if (way_pt.x == way_pt_last.x) {
-                    if (way_pt.y > way_pt_last.y)
-                        dir = _down;
-                    else if (way_pt.y == way_pt_last.y)
-                        dir = _no_dir;
-                    else if (way_pt.y <  way_pt_last.y)
-                        dir = _up;
-                }
-                else if (way_pt.x < way_pt_last.x) {
-                    if (way_pt.y > way_pt_last.y)
-                        dir = _down_left;
-                    else if (way_pt.y == way_pt_last.y)
-                        dir = _left;
-                    else if (way_pt.y <  way_pt_last.y)
-                        dir = _up_left;
-                }
 
-                switch (dir) {
-                    case _up   :
-                    case _down :
-                        printf("| ");
-                        break;
-
-                    case _right :
-                    case _left  :
-                        printf("- ");
-                        break;
-
-                    case _up_right  :
-                    case _down_left :
-                         printf("/ ");
-                        break;
-
-                    case _down_right :
-                    case _up_left :
-                        printf("\\ ");
-                        break;
-
-                    case _no_dir :
-                        printf("* ");
-                        break;
-
-                    default : break;
-                }
-                i++;
             }
+            if (is_this_point_route == true)
+                is_this_point_route = false;        // 如果上面画过点了，这里就不画了，复位标识位即可
             else if (graphMat(y, x) > 0)
                 cout << "1 ";
             else if (!graphMat(y, x))
                 cout << "0 ";
-
         }
+
         cout << endl;
     }
 }
