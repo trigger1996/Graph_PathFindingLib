@@ -1,3 +1,0 @@
-/home/ghost/src/workspace/xmu/path_planning/A_star/build/CMakeFiles/edit_cache.dir
-/home/ghost/src/workspace/xmu/path_planning/A_star/build/CMakeFiles/A_star.dir
-/home/ghost/src/workspace/xmu/path_planning/A_star/build/CMakeFiles/rebuild_cache.dir

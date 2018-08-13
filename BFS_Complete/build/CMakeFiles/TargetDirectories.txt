@@ -1,3 +1,0 @@
-/home/ghost/src/workspace/xmu/path_planning/BFS_Complete/build/CMakeFiles/edit_cache.dir
-/home/ghost/src/workspace/xmu/path_planning/BFS_Complete/build/CMakeFiles/bfs_w_ui.dir
-/home/ghost/src/workspace/xmu/path_planning/BFS_Complete/build/CMakeFiles/rebuild_cache.dir
