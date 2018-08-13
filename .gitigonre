@@ -3,6 +3,12 @@
 *.out
 Makefile
 Makefile.*
+*.make
 
 build/
 */build/
+
+A_star/build
+BFS_Complete/build
+Breadth_First_Search/build
+graph_lib/build
