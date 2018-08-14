@@ -60,6 +60,9 @@ public:
 
         x_max = 0;
         y_max = 0;
+
+        delete bfs_q;
+        delete route;
     }
 
 /// 获得、写入数据

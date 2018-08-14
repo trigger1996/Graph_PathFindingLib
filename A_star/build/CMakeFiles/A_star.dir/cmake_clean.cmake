@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/A_star.dir/node.cpp.o"
+  "CMakeFiles/A_star.dir/graph_simple_w_a_star.cpp.o"
   "CMakeFiles/A_star.dir/main.cpp.o"
   "A_star.pdb"
   "A_star"

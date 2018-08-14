@@ -4,3 +4,7 @@ build/CMakeFiles/feature_tests.c
 build/CMakeFiles/feature_tests.cxx
 main.cpp
 CMakeLists.txt
+node.cpp
+include/graph_simple_w_A_star.h
+include/node.h
+graph_simple_w_a_star.cpp

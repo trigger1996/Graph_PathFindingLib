@@ -57,9 +57,57 @@ include CMakeFiles/A_star.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/A_star.dir/flags.make
 
+CMakeFiles/A_star.dir/node.cpp.o: CMakeFiles/A_star.dir/flags.make
+CMakeFiles/A_star.dir/node.cpp.o: ../node.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ghost/src/workspace/xmu/path_planning/A_star/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/A_star.dir/node.cpp.o"
+	/usr/lib/ccache/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/A_star.dir/node.cpp.o -c /home/ghost/src/workspace/xmu/path_planning/A_star/node.cpp
+
+CMakeFiles/A_star.dir/node.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/A_star.dir/node.cpp.i"
+	/usr/lib/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ghost/src/workspace/xmu/path_planning/A_star/node.cpp > CMakeFiles/A_star.dir/node.cpp.i
+
+CMakeFiles/A_star.dir/node.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/A_star.dir/node.cpp.s"
+	/usr/lib/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ghost/src/workspace/xmu/path_planning/A_star/node.cpp -o CMakeFiles/A_star.dir/node.cpp.s
+
+CMakeFiles/A_star.dir/node.cpp.o.requires:
+
+.PHONY : CMakeFiles/A_star.dir/node.cpp.o.requires
+
+CMakeFiles/A_star.dir/node.cpp.o.provides: CMakeFiles/A_star.dir/node.cpp.o.requires
+	$(MAKE) -f CMakeFiles/A_star.dir/build.make CMakeFiles/A_star.dir/node.cpp.o.provides.build
+.PHONY : CMakeFiles/A_star.dir/node.cpp.o.provides
+
+CMakeFiles/A_star.dir/node.cpp.o.provides.build: CMakeFiles/A_star.dir/node.cpp.o
+
+
+CMakeFiles/A_star.dir/graph_simple_w_a_star.cpp.o: CMakeFiles/A_star.dir/flags.make
+CMakeFiles/A_star.dir/graph_simple_w_a_star.cpp.o: ../graph_simple_w_a_star.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ghost/src/workspace/xmu/path_planning/A_star/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/A_star.dir/graph_simple_w_a_star.cpp.o"
+	/usr/lib/ccache/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/A_star.dir/graph_simple_w_a_star.cpp.o -c /home/ghost/src/workspace/xmu/path_planning/A_star/graph_simple_w_a_star.cpp
+
+CMakeFiles/A_star.dir/graph_simple_w_a_star.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/A_star.dir/graph_simple_w_a_star.cpp.i"
+	/usr/lib/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ghost/src/workspace/xmu/path_planning/A_star/graph_simple_w_a_star.cpp > CMakeFiles/A_star.dir/graph_simple_w_a_star.cpp.i
+
+CMakeFiles/A_star.dir/graph_simple_w_a_star.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/A_star.dir/graph_simple_w_a_star.cpp.s"
+	/usr/lib/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ghost/src/workspace/xmu/path_planning/A_star/graph_simple_w_a_star.cpp -o CMakeFiles/A_star.dir/graph_simple_w_a_star.cpp.s
+
+CMakeFiles/A_star.dir/graph_simple_w_a_star.cpp.o.requires:
+
+.PHONY : CMakeFiles/A_star.dir/graph_simple_w_a_star.cpp.o.requires
+
+CMakeFiles/A_star.dir/graph_simple_w_a_star.cpp.o.provides: CMakeFiles/A_star.dir/graph_simple_w_a_star.cpp.o.requires
+	$(MAKE) -f CMakeFiles/A_star.dir/build.make CMakeFiles/A_star.dir/graph_simple_w_a_star.cpp.o.provides.build
+.PHONY : CMakeFiles/A_star.dir/graph_simple_w_a_star.cpp.o.provides
+
+CMakeFiles/A_star.dir/graph_simple_w_a_star.cpp.o.provides.build: CMakeFiles/A_star.dir/graph_simple_w_a_star.cpp.o
+
+
 CMakeFiles/A_star.dir/main.cpp.o: CMakeFiles/A_star.dir/flags.make
 CMakeFiles/A_star.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ghost/src/workspace/xmu/path_planning/A_star/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/A_star.dir/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ghost/src/workspace/xmu/path_planning/A_star/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/A_star.dir/main.cpp.o"
 	/usr/lib/ccache/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/A_star.dir/main.cpp.o -c /home/ghost/src/workspace/xmu/path_planning/A_star/main.cpp
 
 CMakeFiles/A_star.dir/main.cpp.i: cmake_force
@@ -83,11 +131,15 @@ CMakeFiles/A_star.dir/main.cpp.o.provides.build: CMakeFiles/A_star.dir/main.cpp.
 
 # Object files for target A_star
 A_star_OBJECTS = \
+"CMakeFiles/A_star.dir/node.cpp.o" \
+"CMakeFiles/A_star.dir/graph_simple_w_a_star.cpp.o" \
 "CMakeFiles/A_star.dir/main.cpp.o"
 
 # External object files for target A_star
 A_star_EXTERNAL_OBJECTS =
 
+A_star: CMakeFiles/A_star.dir/node.cpp.o
+A_star: CMakeFiles/A_star.dir/graph_simple_w_a_star.cpp.o
 A_star: CMakeFiles/A_star.dir/main.cpp.o
 A_star: CMakeFiles/A_star.dir/build.make
 A_star: /usr/local/lib/libopencv_videostab.so.2.4.13
@@ -110,7 +162,7 @@ A_star: /usr/local/lib/libopencv_imgproc.so.2.4.13
 A_star: /usr/local/lib/libopencv_flann.so.2.4.13
 A_star: /usr/local/lib/libopencv_core.so.2.4.13
 A_star: CMakeFiles/A_star.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ghost/src/workspace/xmu/path_planning/A_star/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable A_star"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ghost/src/workspace/xmu/path_planning/A_star/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable A_star"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/A_star.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -118,6 +170,8 @@ CMakeFiles/A_star.dir/build: A_star
 
 .PHONY : CMakeFiles/A_star.dir/build
 
+CMakeFiles/A_star.dir/requires: CMakeFiles/A_star.dir/node.cpp.o.requires
+CMakeFiles/A_star.dir/requires: CMakeFiles/A_star.dir/graph_simple_w_a_star.cpp.o.requires
 CMakeFiles/A_star.dir/requires: CMakeFiles/A_star.dir/main.cpp.o.requires
 
 .PHONY : CMakeFiles/A_star.dir/requires

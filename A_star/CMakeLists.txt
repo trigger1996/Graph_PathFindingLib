@@ -19,6 +19,8 @@ link_directories(
 )
 
 add_executable(${PROJECT_NAME}
+node.cpp
+graph_simple_w_a_star.cpp
 main.cpp
 )
 

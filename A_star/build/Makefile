@@ -123,6 +123,33 @@ A_star/fast:
 	$(MAKE) -f CMakeFiles/A_star.dir/build.make CMakeFiles/A_star.dir/build
 .PHONY : A_star/fast
 
+graph_simple_w_a_star.o: graph_simple_w_a_star.cpp.o
+
+.PHONY : graph_simple_w_a_star.o
+
+# target to build an object file
+graph_simple_w_a_star.cpp.o:
+	$(MAKE) -f CMakeFiles/A_star.dir/build.make CMakeFiles/A_star.dir/graph_simple_w_a_star.cpp.o
+.PHONY : graph_simple_w_a_star.cpp.o
+
+graph_simple_w_a_star.i: graph_simple_w_a_star.cpp.i
+
+.PHONY : graph_simple_w_a_star.i
+
+# target to preprocess a source file
+graph_simple_w_a_star.cpp.i:
+	$(MAKE) -f CMakeFiles/A_star.dir/build.make CMakeFiles/A_star.dir/graph_simple_w_a_star.cpp.i
+.PHONY : graph_simple_w_a_star.cpp.i
+
+graph_simple_w_a_star.s: graph_simple_w_a_star.cpp.s
+
+.PHONY : graph_simple_w_a_star.s
+
+# target to generate assembly for a file
+graph_simple_w_a_star.cpp.s:
+	$(MAKE) -f CMakeFiles/A_star.dir/build.make CMakeFiles/A_star.dir/graph_simple_w_a_star.cpp.s
+.PHONY : graph_simple_w_a_star.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -150,6 +177,33 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles/A_star.dir/build.make CMakeFiles/A_star.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+node.o: node.cpp.o
+
+.PHONY : node.o
+
+# target to build an object file
+node.cpp.o:
+	$(MAKE) -f CMakeFiles/A_star.dir/build.make CMakeFiles/A_star.dir/node.cpp.o
+.PHONY : node.cpp.o
+
+node.i: node.cpp.i
+
+.PHONY : node.i
+
+# target to preprocess a source file
+node.cpp.i:
+	$(MAKE) -f CMakeFiles/A_star.dir/build.make CMakeFiles/A_star.dir/node.cpp.i
+.PHONY : node.cpp.i
+
+node.s: node.cpp.s
+
+.PHONY : node.s
+
+# target to generate assembly for a file
+node.cpp.s:
+	$(MAKE) -f CMakeFiles/A_star.dir/build.make CMakeFiles/A_star.dir/node.cpp.s
+.PHONY : node.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -159,9 +213,15 @@ help:
 	@echo "... edit_cache"
 	@echo "... A_star"
 	@echo "... rebuild_cache"
+	@echo "... graph_simple_w_a_star.o"
+	@echo "... graph_simple_w_a_star.i"
+	@echo "... graph_simple_w_a_star.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... node.o"
+	@echo "... node.i"
+	@echo "... node.s"
 .PHONY : help
 
 
