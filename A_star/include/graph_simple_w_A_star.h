@@ -16,6 +16,18 @@ using namespace std;
 using namespace cv;
 using namespace Eigen;
 
+typedef enum {
+    _up         = 1,
+    _up_right   = 2,
+    _right      = 3,
+    _down_right = 4,
+    _down       = 5,
+    _down_left  = 6,
+    _left       = 7,
+    _up_left    = 8,
+    _no_dir     = 9,
+} __dir_flag;
+
 
 class __node_A_star : public __node {
 public:
@@ -168,7 +180,7 @@ public:
 
     void draw_Img_with_Route(char winName[]);                               // 作图，同时作出BFS算出的路径，必定显示，可选文件名
 
-//  void print_Img_with_Route();                                            // 使用终端打印出图以及BFS算出的路径
+    void print_Img_with_Route();                                            // 使用终端打印出图以及BFS算出的路径
 
 protected:
 
