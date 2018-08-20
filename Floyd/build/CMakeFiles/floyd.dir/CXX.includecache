@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/ghost/src/workspace/xmu/path_planning/Floyd/graph_simple_w_floyd.cpp
+include/graph_simple_w_floyd.h
+/home/ghost/src/workspace/xmu/path_planning/Floyd/include/graph_simple_w_floyd.h
+
+/home/ghost/src/workspace/xmu/path_planning/Floyd/include/graph_simple_w_floyd.h
+iostream
+-
+vector
+-
+algorithm
+-
+cmath
+-
+../graph_lib/include/graph_simple.h
+/home/ghost/src/workspace/xmu/path_planning/Floyd/graph_lib/include/graph_simple.h
+
+/home/ghost/src/workspace/xmu/path_planning/Floyd/main.cpp
+iostream
+-
+include/graph_simple_w_floyd.h
+/home/ghost/src/workspace/xmu/path_planning/Floyd/include/graph_simple_w_floyd.h
+

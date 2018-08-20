@@ -103,8 +103,8 @@ public:
 
 private:
 
-    double _F;
-    double _G, _H;
+    double _F;                                                  // 该点的总开销值
+    double _G, _H;                                              // G为从原点经过各个点到当前位置的开销，欧式距离，H为当前点到终点的估计距离，曼哈顿距离
 
 };
 
@@ -176,11 +176,11 @@ public:
     void run_Astar();                                                       // 执行A*算法
 
 /// 绘图程序
-    void draw_Img_with_Route(bool is_show);                                 // 作图，同时作出BFS算出的路径，可选是否显示，固定文件名
+    void draw_Img_with_Route(bool is_show);                                 // 作图，同时作出A*算出的路径，可选是否显示，固定文件名
 
-    void draw_Img_with_Route(char winName[]);                               // 作图，同时作出BFS算出的路径，必定显示，可选文件名
+    void draw_Img_with_Route(char winName[]);                               // 作图，同时作出A*算出的路径，必定显示，可选文件名
 
-    void print_Img_with_Route();                                            // 使用终端打印出图以及BFS算出的路径
+    void print_Img_with_Route();                                            // 使用终端打印出图以及A*算出的路径
 
 protected:
 

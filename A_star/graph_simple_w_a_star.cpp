@@ -186,8 +186,8 @@ void __graph_simple_A_star::draw_Img_with_Route(bool is_show) {
 
     /// 是否显示
     if (is_show) {
-        namedWindow("graph_w_bfs", WINDOW_NORMAL);
-        imshow("graph_w_bfs", img);
+        namedWindow("graph_w_Astar", WINDOW_NORMAL);
+        imshow("graph_w_Astar", img);
         waitKey(1);
     }
 }
