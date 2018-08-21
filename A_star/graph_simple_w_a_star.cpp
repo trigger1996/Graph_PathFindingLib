@@ -192,7 +192,7 @@ void __graph_simple_A_star::draw_Img_with_Route(bool is_show) {
     }
 }
 
-void __graph_simple_A_star::draw_Img_with_Route(char winName[]){
+void __graph_simple_A_star::draw_Img_with_Route(char winName[]) {
     draw_Img_with_Route(false);
 
     namedWindow(winName, WINDOW_NORMAL);

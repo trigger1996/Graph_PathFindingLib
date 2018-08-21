@@ -101,6 +101,8 @@ public:
 
 protected:
 
+    MatrixXd Dw;                                                                // 带权值的邻接矩阵，其实就是不通的点的代价特别大
+
     Point2f _startPos;                                                          // 路径起点
     Point2f _endPos;                                                            // 路径终点
 
@@ -109,6 +111,11 @@ protected:
     vector<double> dist;                                                        // 距离列表
 
     __node_q *route;
+
+    vector<int32_t> path;
+
+    void adjMat_2_Weighted();                                                   // 将邻接矩阵中不通的点的值设为无穷，这样方便计算
+
 };
 
 #endif  // __Graph_Simple_w_BFS_H

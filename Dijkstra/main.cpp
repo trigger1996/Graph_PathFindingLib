@@ -26,8 +26,7 @@ int main() {
     __graph_simple_dijkstra dijkstra_graph(_map, start, end);
 
     dijkstra_graph.run_Dijkstra();
-    dijkstra_graph.draw(true);
-    //dijkstra_graph.draw_Img_with_Route((char *)"bfs result");
+    dijkstra_graph.draw_Img_with_Route((char *)"dijkstra result");
     //dijkstra_graph.print_Img_with_Route();
 
     waitKey(0);
